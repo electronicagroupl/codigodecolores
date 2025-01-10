@@ -13,7 +13,7 @@ body {
     overflow: hidden;
     background: linear-gradient(270deg, #ff0000, #000000);
     background-size: 400% 400%;
-    animation: neonBackground 6s ease infinite;
+    animation: neonBackground 6s ease infinite, text-color-animation 6s ease infinite;
 }
 
 .container {
@@ -37,7 +37,7 @@ h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
     text-shadow: 0 0 10px #ff0000, 0 0 30px #ff0000, 0 0 50px #ff0000;
-    animation: fadeInTitle 1.5s ease-in-out;
+    animation: fadeInTitle 1.5s ease-in-out, text-color-animation 6s ease infinite;
 }
 
 @keyframes fadeInTitle {
@@ -67,7 +67,7 @@ td, th {
     color: #fff;
     transition: all 0.3s ease;
     opacity: 0;
-    animation: fadeInCell 1s ease-in-out forwards;
+    animation: fadeInCell 1s ease-in-out forwards, text-color-animation 6s ease infinite;
 }
 
 @keyframes fadeInCell {
@@ -103,6 +103,18 @@ th {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes text-color-animation {
+    0% {
+        color: #FF0000;
+    }
+    50% {
+        color: #FFFFFF;
+    }
+    100% {
+        color: #FF0000;
     }
 }
 
