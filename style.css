@@ -1,0 +1,122 @@
+/* Estilo general */
+body {
+    background-color: #111; /* Fondo oscuro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Fondo estático de gradiente amarillo y negro */
+body {
+    background: linear-gradient(270deg, #ff0000, #000000); /* Gradiente de amarillo a negro */
+    background-size: 100% 100%; /* Fondo fijo */
+}
+
+/* Contenedor principal */
+.container {
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Sutil efecto de neón amarillo */
+    width: 90%;
+    max-width: 900px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInContainer 2s forwards;
+}
+
+/* Animación de entrada para el contenedor */
+@keyframes fadeInContainer {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo del título */
+h1 {
+    color: #ffcc00; /* Color amarillo neón */
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ffcc00, 0 0 30px #ffcc00, 0 0 50px #ffcc00; /* Efecto de neón */
+    animation: fadeInTitle 1.5s ease-in-out;
+}
+
+/* Animación de entrada para el título */
+@keyframes fadeInTitle {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: transparent; /* Fondo transparente para la tabla */
+    opacity: 0;
+    animation: fadeInTable 2s ease-in-out 0.5s forwards; /* Animación con retardo */
+}
+
+/* Animación de entrada para la tabla */
+@keyframes fadeInTable {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo de las celdas de la tabla */
+td, th {
+    padding: 12px 18px;
+    border: 1px solid #444;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInCell 1s ease-in-out forwards; /* Animación de celdas */
+}
+
+/* Animación de entrada para las celdas de la tabla */
+@keyframes fadeInCell {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Estilo de las celdas de color */
+.color {
+    width: 40px;  /* Ancho fijo para las celdas de color */
+    height: 40px; /* Altura fija para hacer la celda cuadrada */
+    border-radius: 4px;  /* Esquinas ligeramente redondeadas */
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.7); /* Efecto neón amarillo para las celdas */
+    margin: 0 auto; /* Centrar los cuadrados dentro de la celda */
+}
+
+/* Efecto al pasar el mouse por las celdas */
+td:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Estilo de los encabezados de la tabla */
+th {
+    
+    color: #ffffff; /* Color amarillo neón para los encabezados */
+    font-weight: 600;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Reducir el tamaño del título en pantallas más pequeñas */
+    }
+
+    td, th {
+        font-size: 1rem; /* Reducir el tamaño de las celdas en pantallas pequeñas */
+    }
+}
